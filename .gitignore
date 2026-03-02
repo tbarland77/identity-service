@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Local config overrides (never commit credentials) ###
+application-local.yml
+application-local.properties

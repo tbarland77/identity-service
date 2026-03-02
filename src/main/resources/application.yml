@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: identity-service
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  mongodb:
+    uri: ${MONGO_URI}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  mongodb:
+    uri: ${MONGO_URI}
