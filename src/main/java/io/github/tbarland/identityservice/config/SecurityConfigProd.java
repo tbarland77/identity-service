@@ -10,18 +10,13 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-@Profile("!prod")
-public class SecurityConfig {
+@Profile("prod")
+public class SecurityConfigProd {
 
     private static final String[] PUBLIC_ENDPOINTS = {
-            // Swagger UI
-            "/swagger-ui/**",
-            "/swagger-ui.html",
-            "/v3/api-docs/**",
-            // Actuator
-            "/actuator/health",
-            "/actuator/health/**",
-            "/actuator/info"
+            // Kubernetes/Docker health probes only
+            "/actuator/health/liveness",
+            "/actuator/health/readiness"
     };
 
     @Bean
