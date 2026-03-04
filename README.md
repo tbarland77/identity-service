@@ -1,5 +1,7 @@
 # Identity Service
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A REST API built with Spring Boot that implements an OAuth2 Authorization Server and Resource Server, backed by MongoDB.
 
 ## Tech Stack
@@ -132,3 +134,9 @@ Or via environment variable:
 ```bash
 SPRING_PROFILES_ACTIVE=prod
 ```
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
